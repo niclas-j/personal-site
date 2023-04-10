@@ -1,35 +1,46 @@
 ---
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import { Icon } from "astro-icon";
+import DarkModeToggle from "../components/DarkModeToggle.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Niclas Jost</title>
+  </head>
+  <body class="text-neutral-800 dark:text-white dark:bg-neutral-900 transition-colors">
+    <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-800">
+      <div class="mx-auto max-w-6xl flex items-center justify-between h-full">
+        <a class="font-bold text-xl" href="/">Niclas Jost</a>
+
+        <div class="space-x-8 flex">
+          <a href="#projects">Projekte</a>
+          <a href="/cv">Lebenslauf</a>
+          <div class="flex items-center space-x-2">
+            <a href="https://github.com/niclas-j" target="_blank" aria-label="Öffne mein GitHub Profil">
+              <Icon name="mdi:github" class="h-6 w-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/niclas-jost-45b513240/" target="_blank" aria-label="Öffne mein LinkedIn Profil">
+              <Icon name="mdi:linkedin" class="h-6 w-6" />
+            </a>
+          </div>
+
+          <DarkModeToggle />
+        </div>
+      </div>
+    </nav>
+    <div class="min-h-screen">
+      <slot />
+    </div>
+    <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t">
+      <div class="mx-auto max-w-4xl flex justify-between items-center h-full">
+        <div class="opacity-60">Kontakt · Impressum · Datenschutzerklärung</div>
+        <div class="opacity-60">© Niclas Jost 2023</div>
+      </div>
+    </footer>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

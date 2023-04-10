@@ -1,81 +1,213 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import PlaceholderImage from "../assets/placeholder.jpeg";
+import StockWeb from "../assets/images/stock_web.webp";
+import StockApp from "../assets/images/stock_app.webp";
+import StockServer from "../assets/images/server.webp";
+import { PROJECTS } from "../data/projects";
+import HtmlIcon from "../assets/techicons/htmlicon.png";
+import ExpoIcon from "../assets/techicons/expo-light.png";
+import FlutterIcon from "../assets/techicons/flutter.png";
+import CssIcon from "../assets/techicons/css.png";
+import JsIcon from "../assets/techicons/js.png";
+import ReactIcon from "../assets/techicons/react.png";
+import VueIcon from "../assets/techicons/vue.png";
+import TailwindIcon from "../assets/techicons/tailwind.png";
+import AngularIcon from "../assets/techicons/angular.png";
+import BootstrapIcon from "../assets/techicons/bootstrap.png";
+import StrapiIcon from "../assets/techicons/strapi.png";
+import JqueryIcon from "../assets/techicons/jquery.png";
+import NextIcon from "../assets/techicons/next.png";
+import AstroIcon from "../assets/techicons/astro.png";
+import FirebaseIcon from "../assets/techicons/firebase.png";
+import MongoIcon from "../assets/techicons/mongo.png";
+import TrpcIcon from "../assets/techicons/trpc.png";
+import IonicIcon from "../assets/techicons/ionic.png";
+import SqlIcon from "../assets/techicons/sql.png";
+import GraphqlIcon from "../assets/techicons/graphql.png";
+import NodeIcon from "../assets/techicons/node.png";
+import ExpressIcon from "../assets/techicons/express.png";
+import TechCircle from "../components/TechCircle.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout>
+  <main>
+    <div class="h-96 flex items-center bg-slate-100 dark:bg-neutral-800 border-b dark:border-b-neutral-800">
+      <div class="flex flex-row mx-auto max-w-6xl w-full justify-between items-center space-x-12">
+        <div>
+          <h1 class="font-extrabold text-5xl max-w-lg">Professionelle <span class="text-blue-800 dark:text-blue-400 dark:text-blue-400">Softwareentwicklung</span> aus Deutschland</h1>
+          <!-- <button class="mt-8 bg-black text-white px-4 py-1.5 rounded-md font-semibold">Jetzt Kontaktieren</button> -->
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+          <form action="mailto:niclas.jost00@gmail.com" method="GET">
+            <button type="submit" class="mt-8 bg-slate-900 dark:bg-white dark:text-black dark:hover:bg-neutral-300 text-white hover:bg-slate-700 h-12 py-2.5 px-5 inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Jetzt Kontaktieren</button>
+          </form>
+        </div>
+        <div>
+          <Image class="rounded-md" width={250} src={PlaceholderImage} alt="Platzhalter" />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mx-auto max-w-6xl flex flex-row h-full justify-between items-center my-20">
+        <div class="flex flex-col h-full justify-center">
+          <h1 class="text-4xl font-extrabold">Frontend Entwicklung</h1>
+          <p class="max-w-xl opacity-60 my-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?
+          </p>
+
+          <div class="max-w-xl space-x-2 space-y-2">
+            <TechCircle name="HTML" img={HtmlIcon} />
+            <TechCircle name="CSS" img={CssIcon} />
+            <TechCircle name="JavaScript" img={JsIcon} />
+            <TechCircle name="jQuery" img={JqueryIcon} />
+            <TechCircle name="React" img={ReactIcon} />
+            <TechCircle name="Vue" img={VueIcon} />
+            <TechCircle name="Angular" img={AngularIcon} />
+            <TechCircle name="Tailwind" img={TailwindIcon} />
+            <TechCircle name="Bootstrap" img={BootstrapIcon} />
+            <TechCircle name="Next.js" img={NextIcon} />
+            <TechCircle name="Astro" img={AstroIcon} />
+          </div>
+        </div>
+
+        <div class="flex items-center h-full">
+          <Image class="rounded-md mb-2" width={500} src={StockWeb} alt={"Webtechnologie Stock Image"} />
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-6xl flex flex-row-reverse h-full justify-between items-center my-20">
+        <div class="flex flex-col h-full justify-center">
+          <h1 class="text-4xl font-extrabold">Mobile App Entwicklung</h1>
+          <p class="max-w-xl opacity-60 my-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?
+          </p>
+
+          <div class="max-w-xl space-x-2 space-y-2">
+            <TechCircle name="Flutter" img={FlutterIcon} />
+            <TechCircle name="React Native" img={ReactIcon} />
+            <TechCircle name="Expo" img={ExpoIcon} />
+            <TechCircle name="Ionic" img={IonicIcon} />
+            <TechCircle name="Firebase" img={FirebaseIcon} />
+          </div>
+        </div>
+
+        <div class="flex items-center h-full">
+          <Image class="rounded-md mb-2" width={500} src={StockApp} alt={"Webtechnologie Stock Image"} />
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-6xl flex flex-row h-full justify-between my-20 items-center">
+        <div class="flex flex-col h-full justify-center">
+          <h1 class="text-4xl font-extrabold">Backend Entwicklung</h1>
+          <p class="max-w-xl opacity-60 my-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?
+          </p>
+
+          <div class="max-w-xl space-x-2 space-y-2">
+            <TechCircle name="Node.js" img={NodeIcon} />
+            <TechCircle name="Express" img={ExpressIcon} />
+            <TechCircle name="Strapi" img={StrapiIcon} />
+            <TechCircle name="SQL" img={SqlIcon} />
+            <TechCircle name="GraphQL" img={GraphqlIcon} />
+            <TechCircle name="tRPC" img={TrpcIcon} />
+            <TechCircle name="MongoDB" img={MongoIcon} />
+          </div>
+        </div>
+
+        <div class="flex items-center h-full">
+          <Image class="rounded-md mb-2" width={500} src={StockServer} alt={"Webtechnologie Stock Image"} />
+        </div>
+      </div>
+    </div>
+
+    <div class="py-8 bg-slate-100 dark:bg-neutral-800 border-y dark:border-y-neutral-700">
+      <div class="mx-auto max-w-6xl flex justify-between h-full">
+        <div class="flex flex-col h-full">
+          <h2 class="font-extrabold text-4xl">Über mich</h2>
+
+          <p class="opacity-60 mt-2 max-w-xl">
+            Ich bin ein 23-jähriger Softwareentwickler aus Leipzig und arbeite seit sieben Jahren in diesem Bereich. Seit vier Jahren biete ich meine Dienste als Softwareentwickler an. Ich habe mich auf die Entwicklung von performanten Anwendungen im Web- und Mobilebereich spezialisiert und habe umfangreiche Erfahrung in der Arbeit mit verschiedenen Programmiersprachen und Frameworks. Als junger Mensch bin ich sehr leidenschaftlich und engagiert in meinem Beruf und nehme jede Herausforderung mit
+            Begeisterung an.
+          </p>
+
+          <p class="opacity-60 my-4 max-w-xl">
+            Ich bin in der Lage, innovative und maßgeschneiderte Lösungen für meine Kunden zu entwickeln, die ihre Geschäftsprozesse optimieren und ihr Unternehmen voranbringen können. Ich schätze die Zusammenarbeit mit meinen Kunden und arbeite eng mit ihnen zusammen, um ihre Anforderungen und Ziele zu verstehen und zu erfüllen. Wenn Sie auf der Suche nach einem kompetenten und erfahrenen Softwareentwickler sind, der bereit ist, mit Ihnen zusammenzuarbeiten, um die bestmögliche Lösung für Ihr
+            Unternehmen zu finden, dann bin ich der richtige Partner für Sie. Kontaktieren Sie mich gerne, um mehr darüber zu erfahren, wie ich Ihnen helfen kann.
+          </p>
+        </div>
+
+        <div class="pt-10">
+          <div class="flex flex-col w-full space-y-8">
+            <div class="flex flex-col justify-center">
+              <div class="text-blue-800 dark:text-blue-400 uppercase font-semibold text-sm">PROGRAMMIERERFAHRUNG</div>
+              <div>über 7+ Jahre</div>
+            </div>
+
+            <div class="flex flex-col justify-center">
+              <div class="text-blue-800 dark:text-blue-400 uppercase font-semibold text-sm">FREELANCER</div>
+              <div>seit 4+ Jahren</div>
+            </div>
+
+            <div class="flex flex-col justify-center">
+              <div class="text-blue-800 dark:text-blue-400 uppercase font-semibold text-sm">SPRACHEN</div>
+              <div>German, English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-8">
+      <div class="mx-auto max-w-6xl flex flex-col">
+        <h2 id="projects" class="font-extrabold text-4xl">Ausgewählte Projekte</h2>
+
+        <div class="grid grid-cols-2 mt-4 gap-8">
+          <div class="flex flex-row justify-between bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 border-slate-200 border px-4 pb-4 rounded-lg col-span-2">
+            <div class="flex flex-col justify-end">
+              <div class="mt-4">{PROJECTS.REWE.name}</div>
+              <p class="opacity-60 text-sm">{PROJECTS.REWE.description}</p>
+            </div>
+
+            <div class="w-full overflow-hidden flex justify-end">
+              <Image width={200} src={PROJECTS.REWE.image} alt={PROJECTS.REWE.name + " Logo"} class="mt-4 rounded-sm" />
+            </div>
+          </div>
+
+          <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border px-4 rounded-lg col-span-1">
+            <div class="w-full h-40 overflow-hidden">
+              <Image height={400} width={300} src={PROJECTS.WHIZZPER.image} alt={PROJECTS.WHIZZPER.name + " Logo"} class="mt-4 mx-auto rounded-md" />
+            </div>
+            <div class="mt-4">{PROJECTS.WHIZZPER.name}</div>
+            <p class="opacity-60 text-sm">{PROJECTS.WHIZZPER.description}</p>
+          </div>
+
+          <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border px-4 pb-4 rounded-lg col-span-1">
+            <div class="w-full h-40 overflow-hidden">
+              <Image height={150} width={150} src={PROJECTS.PRIMAL.image} alt={PROJECTS.PRIMAL.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
+            </div>
+            <div class="mt-4">{PROJECTS.PRIMAL.name}</div>
+            <p class="opacity-60 text-sm">{PROJECTS.PRIMAL.description}</p>
+          </div>
+
+          <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border pb-4 px-4 rounded-lg col-span-1">
+            <div class="w-full overflow-hidden">
+              <Image height={300} width={300} src={PROJECTS.MWAY.image} alt={PROJECTS.MWAY.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
+            </div>
+            <div class="mt-4">{PROJECTS.MWAY.name}</div>
+            <p class="opacity-60 text-sm">{PROJECTS.MWAY.description}</p>
+          </div>
+
+          <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border px-4 pb-4 rounded-lg col-span-1">
+            <div class="w-full overflow-hidden">
+              <Image height={300} width={300} src={PROJECTS.VERMIETERLUPE.image} alt={PROJECTS.VERMIETERLUPE.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
+            </div>
+            <div class="mt-4">{PROJECTS.VERMIETERLUPE.name}</div>
+            <p class="opacity-60 text-sm">{PROJECTS.VERMIETERLUPE.description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

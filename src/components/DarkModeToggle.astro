@@ -1,0 +1,39 @@
+<button id="toggleButton"></button>
+<script is:inline>
+  const button = document.getElementById("toggleButton");
+
+  const getTheme = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  };
+  let theme = getTheme();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+    button.textContent = "🌙";
+  } else {
+    document.documentElement.classList.add("dark");
+    button.textContent = "☀️";
+  }
+
+  button.onclick = () => {
+    if (theme === "light") {
+      document.documentElement.classList.add("dark");
+      button.textContent = "☀️";
+      window.localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      button.textContent = "🌙";
+      window.localStorage.setItem("theme", "light");
+    }
+
+    theme = getTheme();
+  };
+
+  window.localStorage.setItem("theme", theme);
+</script>

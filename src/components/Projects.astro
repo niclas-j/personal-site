@@ -1,0 +1,56 @@
+---
+import WhizzperLogo from "../assets/portfolio/whizzper.png";
+import PrimalLogo from "../assets/portfolio/primal.png";
+import ReweLogo from "../assets/portfolio/rewe-ipad-app.jpeg";
+import IGPLogo from "../assets/portfolio/igp.jpeg";
+import type { Project } from "../types/project.types";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects: Project[] = [
+  {
+    name: "whizzper",
+    colorClass: "bg-yellow-50",
+    description: "Die unternehmensinterne Audio-Bibliothek.",
+    technologies: ["angular", "ionic", "strapi", "flutter", "node", "dart", "typescript"],
+    image: WhizzperLogo,
+    url: "https://whizzper.de",
+  },
+  {
+    name: "primal.fm",
+    colorClass: "bg-red-50",
+    description: "Dein Web-Radiosender für Hardstyle & EDM!",
+    technologies: ["flutter", "dart", "firebase-notifications", "kotlin"],
+    image: PrimalLogo,
+    url: "https://primal.fm",
+  },
+  {
+    name: "Rewe Allergene Terminal",
+    colorClass: "bg-green-50",
+    description: "Informationen an der Frischetheke für REWE Kunden. Automatische Updates und intelligente Suche über die spezialisierte iPad App.",
+    technologies: ["ionic", "typescript", "nestjs"],
+    image: ReweLogo,
+  },
+  {
+    name: "mway interaktiver Messeplan",
+    colorClass: "bg-green-50",
+    description: "Interaktiver Plan zur Navigation von Messen und Hallen. Auflistung von Events und Ausstellern.",
+    technologies: ["angular", "ionic", "typescript", "node", "graphql"],
+    image: IGPLogo,
+    url: "https://automechanika.messefrankfurt.com/frankfurt/de/suche.html",
+  },
+];
+---
+
+<div class="max-w-4xl mx-auto mt-10">
+  <div class="grid grid-cols-2 gap-8">
+    <div class="col-span-1 row-span-1">
+      <ProjectCard project={projects[0]!} />
+    </div>
+    <div class="col-span-1 row-span-2">
+      <ProjectCard project={projects[2]!} />
+    </div>
+    <div class="col-span-1 row-span-1">
+      <ProjectCard project={projects[1]!} imageWidth={150} imageHeight={150} />
+    </div>
+  </div>
+</div>

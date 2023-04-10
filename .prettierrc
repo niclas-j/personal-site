@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ],
+  "semi": true,
+  "printWidth": 800
+}

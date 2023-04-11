@@ -1,0 +1,86 @@
+{
+    "nav": {
+        "contact": "Kontakt",
+        "cv": "Lebenslauf",
+        "projects": "Projekte",
+        "privacy": "Datenschutzerklärung",
+        "about": "Impressum"
+    },
+    "home": {
+        "title": "Professionelle <0>Softwareentwicklung</0> aus Deutschland",
+        "action-btn": "Jetzt Kontaktieren",
+        "frontend": {
+            "title": "Frontend Entwicklung",
+            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+        },
+        "backend": {
+            "title": "Backend Entwicklung",
+            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+        },
+        "mobile": {
+            "title": "Mobile App Entwicklung",
+            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+        },
+        "aboutme": {
+            "title": "Über mich",
+            "content": "<0>Ich bin ein 23-jähriger Softwareentwickler aus Leipzig und arbeite seit sieben Jahren in diesem Bereich. Seit vier Jahren biete ich meine Dienste als Softwareentwickler an. Ich habe mich auf die Entwicklung von performanten Anwendungen im Web- und Mobilebereich spezialisiert und habe umfangreiche Erfahrung in der Arbeit mit verschiedenen Programmiersprachen und Frameworks. Als junger Mensch bin ich sehr leidenschaftlich und engagiert in meinem Beruf und nehme jede Herausforderung mit Begeisterung an.</0><1>Ich bin in der Lage, innovative und maßgeschneiderte Lösungen für meine Kunden zu entwickeln, die ihre Geschäftsprozesse optimieren und ihr Unternehmen voranbringen können. Ich schätze die Zusammenarbeit mit meinen Kunden und arbeite eng mit ihnen zusammen, um ihre Anforderungen und Ziele zu verstehen und zu erfüllen. Wenn Sie auf der Suche nach einem kompetenten und erfahrenen Softwareentwickler sind, der bereit ist, mit Ihnen zusammenzuarbeiten, um die bestmögliche Lösung für Ihr Unternehmen zu finden, dann bin ich der richtige Partner für Sie. Kontaktieren Sie mich gerne, um mehr darüber zu erfahren, wie ich Ihnen helfen kann.</1>"
+        },
+        "experience": "Programmiererfahrung",
+        "experience-value": "über 7+ Jahre",
+        "freelancer-value": "seit 4+ Jahren",
+        "languages": "Sprachen",
+        "language-german": "Deutsch",
+        "language-english": "Englisch",
+        "projects": {
+            "title": "Ausgewählte Projekte",
+            "rewe": {
+                "title": "Rewe Allergene Terminal",
+                "content": "Informationen an der Frischetheke für REWE Kunden. Automatische Updates und intelligente Suche über die spezialisierte iPad App."
+            },
+            "whizzper": {
+                "title": "Whizzper",
+                "content": "Die unternehmensinterne Audio-Bibliothek."
+            },
+            "primalfm": {
+                "title": "primal.fm",
+                "content": "Dein Web-Radiosender für Hardstyle & EDM!"
+            },
+            "mway": {
+                "title": "mway interaktiver Messeplan",
+                "content": "Interaktiver Plan zur Navigation von Messen und Hallen. Auflistung von Events und Ausstellern."
+            },
+            "vermieterlupe": {
+                "title": "Vermieterlupe",
+                "content": "Bewertungsportal zur anonymen Bewertung von Vermietern."
+            }
+        }
+    },
+    "cv": {
+        "title": "Lebenslauf",
+        "first": {
+            "title": "Softwareentwicklung Freelancer"
+        },
+        "second": {
+            "title": "Bachelor of Science",
+            "content": "Abschlussarbeit über die Gegenüberstellung von V-DOM und Signalbasierten Webanwendungen."
+        },
+        "third": {
+            "title": "Datenbankentwickler",
+            "content": "Arbeit als SQL Datenbankentwickler im Tridelta Systemhaus Hermsdorf."
+        },
+        "fourth": {
+            "title": "Ausbildung technischer Assistent für Informatik",
+            "content": "Abgeschlossene Berufsausbildung zum technischen Assistent für Informatik in der TüV Rheinland Schule Gera."
+        }
+    },
+    "contact": {
+        "title": "Ich freue mich auf Ihre Anfrage",
+        "subtitle": "Kontaktieren Sie mich",
+        "formular": {
+            "title": "Kontaktformular",
+            "phone": "Telefonnummer",
+            "message": "Ihre Nachricht",
+            "submit": "Anfrage absenden"
+        }
+    }
+}

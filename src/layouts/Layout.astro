@@ -1,26 +1,27 @@
 ---
 import { Icon } from "astro-icon";
 import DarkModeToggle from "../components/DarkModeToggle.astro";
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
 ---
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Niclas Jost</title>
+    <HeadHrefLangs />
   </head>
   <body class="text-neutral-800 dark:text-white dark:bg-neutral-900 transition-colors">
     <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-700 sm:px-0 px-2">
       <div class="mx-auto max-w-6xl flex items-center justify-between h-full">
-        <a class="font-bold text-xl" href="/">Niclas Jost</a>
-
-        <div class="space-x-8 sm:flex hidden">
-          <a href="#projects">Projekte</a>
-          <a href="/cv">Lebenslauf</a>
-          <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-6">
+          <a class="font-bold text-xl" href={localizePath("/")}>Niclas Jost</a>
+          <div class="flex items-center space-x-2 opacity-80">
             <a href="https://github.com/niclas-j" target="_blank" aria-label="Öffne mein GitHub Profil">
               <Icon name="mdi:github" class="h-6 w-6" />
             </a>
@@ -28,6 +29,12 @@ import DarkModeToggle from "../components/DarkModeToggle.astro";
               <Icon name="mdi:linkedin" class="h-6 w-6" />
             </a>
           </div>
+        </div>
+
+        <div class="space-x-8 sm:flex hidden items-center">
+          <a href={localizePath("/#projects")}>{t("nav.projects")}</a>
+          <a href={localizePath("/cv")}>{t("nav.cv")}</a>
+          <a href={localizePath("/contact")}>{t("nav.contact")}</a>
 
           <DarkModeToggle />
         </div>
@@ -49,30 +56,29 @@ import DarkModeToggle from "../components/DarkModeToggle.astro";
       <slot />
     </div>
     <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t">
-      <div class="mx-auto max-w-4xl flex justify-between items-center h-full">
-        <div class="opacity-60">Kontakt · Impressum · Datenschutzerklärung</div>
+      <div class="mx-auto max-w-6xl flex justify-between items-center h-full text-xs">
         <div class="opacity-60">© Niclas Jost 2023</div>
+        <div class="opacity-60"><a href={localizePath("/contact")}>{t("nav.contact")}</a> · <a href={localizePath("/impressum")}>{t("nav.about")}</a> · <a href={localizePath("privacy")}>{t("nav.privacy")}</a></div>
       </div>
     </footer>
+    <script>
+      const navbarMenu = document.getElementById("navbar-menu");
+      const menuContainer = document.getElementById("menu-container");
+      const content = document.getElementById("content");
+
+      const closeBurgerMenu = () => {
+        menuContainer!.classList.remove("animate-in");
+        menuContainer!.classList.add("hidden", "animate-out");
+      };
+      content!.addEventListener("click", closeBurgerMenu);
+
+      navbarMenu!.addEventListener("click", () => {
+        menuContainer!.classList.add("animate-in");
+        menuContainer!.classList.remove("hidden", "animate-out");
+      });
+
+      const closeBtn = document.getElementById("navbar-menu-close-btn");
+      closeBtn!.addEventListener("click", closeBurgerMenu);
+    </script>
   </body>
 </html>
-
-<script>
-  const navbarMenu = document.getElementById("navbar-menu");
-  const menuContainer = document.getElementById("menu-container");
-  const content = document.getElementById("content");
-
-  const closeBurgerMenu = () => {
-    menuContainer!.classList.remove("animate-in");
-    menuContainer!.classList.add("hidden", "animate-out");
-  };
-  content!.addEventListener("click", closeBurgerMenu);
-
-  navbarMenu!.addEventListener("click", () => {
-    menuContainer!.classList.add("animate-in");
-    menuContainer!.classList.remove("hidden", "animate-out");
-  });
-
-  const closeBtn = document.getElementById("navbar-menu-close-btn");
-  closeBtn!.addEventListener("click", closeBurgerMenu);
-</script>

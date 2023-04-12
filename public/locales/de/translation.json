@@ -11,19 +11,19 @@
         "action-btn": "Jetzt Kontaktieren",
         "frontend": {
             "title": "Frontend Entwicklung",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "Egal ob statische Website oder interaktive Webanwendung, durch meine Erfahrung in der Frontendentwicklung bin ich in der Lage maßgeschneiderte und performante Lösungen anzubieten. Mit meiner Expertise und Engagement für innovative Lösungen kann ich Ihnen helfen, Ihre Online-Präsenz auf die nächste Stufe zu bringen."
         },
         "backend": {
             "title": "Backend Entwicklung",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "Auch die Entwicklung von Fullstack und Backend Anwendungen gehört zu meinem Portfolio. So können wichtige Backendstrukturen zur Kommunikation oder serverseitige Anwendungen realisiert werden."
         },
         "mobile": {
             "title": "Mobile App Entwicklung",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "Ich biete professionelle Mobile-App-Entwicklung für iOS und Android an, die auf React Native, Flutter oder Ionic basiert. Meine Fähigkeiten umfassen die Verwendung dieser Frameworks zur Entwicklung von plattformübergreifenden Apps sowie die Zusammenarbeit mit Ihnen, um ein ansprechendes Benutzererlebnis zu schaffen."
         },
         "aboutme": {
             "title": "Über mich",
-            "content": "<0>Ich bin ein 23-jähriger Softwareentwickler aus Leipzig und arbeite seit sieben Jahren in diesem Bereich. Seit vier Jahren biete ich meine Dienste als Softwareentwickler an. Ich habe mich auf die Entwicklung von performanten Anwendungen im Web- und Mobilebereich spezialisiert und habe umfangreiche Erfahrung in der Arbeit mit verschiedenen Programmiersprachen und Frameworks. Als junger Mensch bin ich sehr leidenschaftlich und engagiert in meinem Beruf und nehme jede Herausforderung mit Begeisterung an.</0><1>Ich bin in der Lage, innovative und maßgeschneiderte Lösungen für meine Kunden zu entwickeln, die ihre Geschäftsprozesse optimieren und ihr Unternehmen voranbringen können. Ich schätze die Zusammenarbeit mit meinen Kunden und arbeite eng mit ihnen zusammen, um ihre Anforderungen und Ziele zu verstehen und zu erfüllen. Wenn Sie auf der Suche nach einem kompetenten und erfahrenen Softwareentwickler sind, der bereit ist, mit Ihnen zusammenzuarbeiten, um die bestmögliche Lösung für Ihr Unternehmen zu finden, dann bin ich der richtige Partner für Sie. Kontaktieren Sie mich gerne, um mehr darüber zu erfahren, wie ich Ihnen helfen kann.</1>"
+            "content": "<0>Ich bin ein 23-jähriger Softwareentwickler aus Leipzig und arbeite seit fast einem Jahrzehnt in diesem Bereich. Durch meinen Schwerpunkt auf der Entwicklung von performanten Anwendungen im Web- und Mobilebereich habe ich umfangreiche Erfahrung in der Arbeit mit verschiedenen Programmiersprachen und Frameworks. Als junger Mensch bin ich sehr leidenschaftlich und engagiert in meinem Beruf und nehme jede Herausforderung mit Begeisterung an.</0><1>Ich bin in der Lage, innovative und maßgeschneiderte Lösungen für meine Kunden zu entwickeln, die ihre Geschäftsprozesse optimieren und ihr Unternehmen voranbringen können. Ich schätze die Zusammenarbeit mit meinen Kunden und arbeite eng mit ihnen zusammen, um ihre Anforderungen und Ziele zu verstehen und zu erfüllen. Wenn Sie auf der Suche nach einem kompetenten und erfahrenen Softwareentwickler sind, der bereit ist, mit Ihnen zusammenzuarbeiten, um die bestmögliche Lösung für Ihr Unternehmen zu finden, dann bin ich der richtige Partner für Sie. Kontaktieren Sie mich gerne, um mehr darüber zu erfahren, wie ich Ihnen helfen kann.</1>"
         },
         "experience": "Programmiererfahrung",
         "experience-value": "über 7+ Jahre",
@@ -81,6 +81,7 @@
             "phone": "Telefonnummer",
             "message": "Ihre Nachricht",
             "submit": "Anfrage absenden"
-        }
+        },
+        "success": "Vielen Dank für Ihre Anfrage. Sie werden in Kürze eine Rückmeldung von mir erhalten."
     }
 }

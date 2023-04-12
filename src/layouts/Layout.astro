@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 import DarkModeToggle from "../components/DarkModeToggle.astro";
 import i18next, { t } from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
+import { HeadHrefLangs, LanguageSelector } from "astro-i18next/components";
 import { localizePath } from "astro-i18next";
 ---
 
@@ -38,27 +38,31 @@ import { localizePath } from "astro-i18next";
 
           <DarkModeToggle />
         </div>
+      </div>
 
-        <button id="navbar-menu" aria-label="Navbar Menü öffnen" class="sm:hidden">
-          <Icon class="h-8 w-8" name="ic:baseline-menu" />
-        </button>
+      <button id="navbar-menu" aria-label="Navbar Menü öffnen" class="sm:hidden">
+        <Icon class="h-8 w-8" name="ic:baseline-menu" />
+      </button>
 
-        <div class="hidden absolute w-full dark:text-white h-96 dark:bg-neutral-900 bg-white border-b dark:border-b-neutral-700 shadow-lg top-0 left-0 slide-out-to-top-96 slide-in-from-top-96" id="menu-container">
-          <div class="flex justify-end h-14 items-center px-2">
-            <button aria-label="Navbar Menü schließen" id="navbar-menu-close-btn">
-              <Icon class="h-8 w-8" name="ic:baseline-close" />
-            </button>
-          </div>
+      <div class="hidden absolute w-full dark:text-white h-96 dark:bg-neutral-900 bg-white border-b dark:border-b-neutral-700 shadow-lg top-0 left-0 slide-out-to-top-96 slide-in-from-top-96" id="menu-container">
+        <div class="flex justify-end h-14 items-center px-2">
+          <button aria-label="Navbar Menü schließen" id="navbar-menu-close-btn">
+            <Icon class="h-8 w-8" name="ic:baseline-close" />
+          </button>
         </div>
       </div>
     </nav>
+
     <div id="content" class="min-h-screen">
       <slot />
     </div>
     <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t">
       <div class="mx-auto max-w-6xl flex justify-between items-center h-full text-xs">
         <div class="opacity-60">© Niclas Jost 2023</div>
-        <div class="opacity-60"><a href={localizePath("/contact")}>{t("nav.contact")}</a> · <a href={localizePath("/impressum")}>{t("nav.about")}</a> · <a href={localizePath("privacy")}>{t("nav.privacy")}</a></div>
+        <div class="opacity-60">
+          <LanguageSelector class="bg-transparent border-none pr-7 hover:cursor-pointer text-xs" />
+          <a href={localizePath("/contact")}>{t("nav.contact")}</a> · <a href={localizePath("/impressum")}>{t("nav.about")}</a> · <a href={localizePath("privacy")}>{t("nav.privacy")}</a>
+        </div>
       </div>
     </footer>
     <script>

@@ -11,15 +11,15 @@
         "action-btn": "Contact now",
         "frontend": {
             "title": "Frontend Development",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "No matter if it's a static website or an interactive web application, my experience in front-end development allows me to offer tailor-made and high-performance solutions. With my expertise and commitment to innovative solutions, I can help you take your online presence to the next level."
         },
         "backend": {
             "title": "Backend Development",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "Developing full-stack and back-end applications is also part of my portfolio. This allows for the creation of important back-end structures for communication or server-side applications."
         },
         "mobile": {
             "title": "Mobile App Development",
-            "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi praesentium debitis consectetur eaque nesciunt tempora odio voluptatem obcaecati qui cum ducimus omnis consequuntur dolor facilis ullam perspiciatis, labore vitae culpa. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus temporibus id perferendis? Deserunt quam aut reiciendis quas? Repellat itaque praesentium alias sed tempora modi voluptates harum minima dignissimos laboriosam?"
+            "content": "I offer professional mobile app development for iOS and Android, based on React Native, Flutter, or Ionic. My skills include using these frameworks to develop cross-platform apps, as well as collaborating with you to create an engaging user experience."
         },
         "aboutme": {
             "title": "About me",

@@ -7,10 +7,10 @@ export interface Props {
 }
 
 const { img, name } = Astro.props;
-const imageSize = 20;
+const imageSize = 40;
 ---
 
 <div class="inline-flex px-2 py-1 items-center rounded-full border text-sm dark:bg-neutral-800 dark:text-white dark:border-neutral-700">
-  {img && <Image src={img} width={imageSize} height={imageSize} alt={`${name} Logo`} />}
+  {img && <Image class="w-5 h-5" src={img} width={imageSize} alt={`${name} Logo`} />}
   <div class="ml-2">{name}</div>
 </div>

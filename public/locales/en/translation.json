@@ -7,7 +7,7 @@
         "about": "About"
     },
     "home": {
-        "title": "Professional <0>Software Development</0> from Germany",
+        "title": "Professional <0>Software Developxment</0> from Germany",
         "action-btn": "Contact now",
         "frontend": {
             "title": "Frontend Development",
@@ -74,13 +74,13 @@
         }
     },
     "contact": {
-        "title": "I am loo",
-        "subtitle": "Kontaktieren Sie mich",
+        "title": "I am looking forward to hearing from you!",
+        "subtitle": "Contact me",
         "formular": {
-            "title": "Kontaktformular",
-            "phone": "Telefonnummer",
-            "message": "Ihre Nachricht",
-            "submit": "Anfrage absenden"
+            "title": "Contactform",
+            "phone": "Phone number",
+            "message": "Your message",
+            "submit": "Send request"
         }
     }
 }

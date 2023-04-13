@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import PlaceholderImage from "../assets/placeholder.jpeg";
+import ProfilePicture from "../assets/images/profilbild.png";
 import StockWeb from "../assets/images/stock_web.webp";
 import StockApp from "../assets/images/stock_app.webp";
 import StockServer from "../assets/images/server.webp";
@@ -39,7 +40,7 @@ export const prerender = true;
 
 <Layout>
   <main>
-    <div class="h-80 sm:h-96 flex items-center bg-slate-100 dark:bg-neutral-800 border-b dark:border-b-neutral-700">
+    <div class="h-80 sm:h-96 flex items-center bg-slate-100 dark:bg-neutral-800 border-b dark:border-b-neutral-700 sm:px-4 lg:px-0">
       <div class="flex flex-row mx-auto max-w-6xl w-full justify-between items-center space-x-12">
         <div>
           <h1 class="font-extrabold text-4xl sm:text-5xl max-w-xl text-center sm:text-left">
@@ -51,16 +52,16 @@ export const prerender = true;
           <a href="/contact" class="mt-8 bg-slate-900 dark:bg-white dark:text-black dark:hover:bg-neutral-300 text-white hover:bg-slate-700 sm:w-auto w-full h-12 py-2.5 px-5 inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">{t("home.action-btn")}</a>
         </div>
         <div class="hidden sm:block">
-          <Image class="rounded-md" width={250} src={PlaceholderImage} alt="Platzhalter" />
+          <Image loading="eager" class="rounded-md w-64" width={800} src={ProfilePicture} alt="Platzhalter" />
         </div>
       </div>
     </div>
 
     <div>
-      <div class="mx-auto sm:max-w-6xl flex sm:flex-row flex-col h-full justify-between items-center mt-5 sm:my-20 w-full">
+      <div class="mx-auto sm:max-w-6xl flex sm:flex-row flex-col h-full justify-between items-center mt-5 sm:my-20 w-full sm:px-4 lg:px-0 px-0">
         <div class="flex flex-col h-full justify-center sm:px-0 px-2">
           <h1 class="text-2xl sm:text-4xl font-extrabold">{t("home.frontend.title")}</h1>
-          <p class="max-w-xl opacity-60 my-2 sm:my-4">{t("home.frontend.content")}</p>
+          <p class="max-w-xl opacity-80 my-2 sm:my-4">{t("home.frontend.content")}</p>
 
           <div class="max-w-xl sm:flex flex-wrap gap-2">
             <TechCircle name="HTML" img={HtmlIcon} />
@@ -78,14 +79,14 @@ export const prerender = true;
         </div>
 
         <div class="items-center h-full sm:mt-0 mt-4 hidden sm:flex">
-          <Image class="sm:rounded-md mb-2" width={500} src={StockWeb} alt={"Webtechnologie Stock Image"} />
+          <Image loading="eager" class="sm:rounded-md mb-2" width={500} src={StockWeb} alt={"Webtechnologie Stock Image"} />
         </div>
       </div>
 
-      <div class="mx-auto max-w-6xl flex flex-col sm:flex-row-reverse h-full justify-between items-center sm:my-20 mt-5">
-        <div class="flex flex-col h-full justify-center sm:px-0 px-2">
+      <div class="mx-auto max-w-6xl flex flex-col sm:flex-row-reverse h-full justify-between items-center sm:my-20 mt-5 sm:px-4 lg:px-0 px-0">
+        <div class="flex flex-col h-full justify-center px-2 lg:px-0">
           <h1 class="text-xl sm:text-4xl font-extrabold">{t("home.mobile.title")}</h1>
-          <p class="max-w-xl opacity-60 my-2 sm:my-4">{t("home.mobile.content")}</p>
+          <p class="max-w-xl opacity-80 my-2 sm:my-4">{t("home.mobile.content")}</p>
 
           <div class="max-w-xl sm:flex flex-wrap gap-2">
             <TechCircle name="Flutter" img={FlutterIcon} />
@@ -101,10 +102,10 @@ export const prerender = true;
         </div>
       </div>
 
-      <div class="mx-auto max-w-6xl flex flex-col sm:flex-row h-full justify-between sm:my-20 items-center my-5">
+      <div class="mx-auto max-w-6xl flex flex-col sm:flex-row h-full justify-between sm:my-20 items-center my-5 sm:px-4 lg:px-0 px-0">
         <div class="flex flex-col h-full justify-center sm:px-0 px-2">
           <h1 class="text-xl sm:text-4xl font-extrabold">{t("home.backend.title")}</h1>
-          <p class="max-w-xl opacity-60 my-2 sm:my-4">{t("home.backend.content")}</p>
+          <p class="max-w-xl opacity-80 my-2 sm:my-4">{t("home.backend.content")}</p>
 
           <div class="max-w-xl sm:flex flex-wrap gap-2">
             <TechCircle name="Node.js" img={NodeIcon} />
@@ -123,14 +124,14 @@ export const prerender = true;
       </div>
     </div>
 
-    <div class="py-8 bg-slate-100 dark:bg-neutral-800 border-y dark:border-y-neutral-700 sm:px-0 px-2">
+    <div class="py-8 bg-slate-100 dark:bg-neutral-800 border-y dark:border-y-neutral-700 sm:px-4 lg:px-0 px-2">
       <div class="mx-auto max-w-6xl flex sm:flex-row flex-col justify-between h-full">
         <div class="flex flex-col h-full">
           <h2 class="font-extrabold text-4xl">{t("home.aboutme.title")}</h2>
 
           <Trans i18nKey="home.aboutme.content">
-            <p class="opacity-60 sm:mt-4 mt-2 max-w-xl"></p>
-            <p class="opacity-60 my-4 max-w-xl"></p>
+            <p class="opacity-80 sm:mt-4 mt-2 max-w-xl"></p>
+            <p class="opacity-80 my-4 max-w-xl"></p>
           </Trans>
         </div>
 
@@ -155,7 +156,7 @@ export const prerender = true;
       </div>
     </div>
 
-    <div class="py-8 sm:px-0 px-2">
+    <div class="py-8 sm:px-4 lg:px-0 px-2">
       <div class="mx-auto max-w-6xl flex flex-col">
         <h2 id="projects" class="font-extrabold text-4xl">{t("home.projects.title")}</h2>
 
@@ -163,7 +164,7 @@ export const prerender = true;
           <div class="flex flex-row justify-between bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 border-slate-200 border px-4 pb-4 rounded-lg col-span-1 sm:col-span-2">
             <div class="flex flex-col justify-end">
               <div class="mt-4">{t("home.projects.rewe.title")}</div>
-              <p class="opacity-60 text-sm">{t("home.projects.rewe.content")}</p>
+              <p class="opacity-80 text-sm">{t("home.projects.rewe.content")}</p>
             </div>
 
             <div class="w-full overflow-hidden flex justify-end">
@@ -176,7 +177,7 @@ export const prerender = true;
               <Image height={400} width={300} src={PROJECTS.WHIZZPER.image} alt={PROJECTS.WHIZZPER.name + " Logo"} class="mt-4 mx-auto rounded-md" />
             </div>
             <div class="mt-4">{t("home.projects.whizzper.title")}</div>
-            <p class="opacity-60 text-sm">{t("home.projects.whizzper.content")}</p>
+            <p class="opacity-80 text-sm">{t("home.projects.whizzper.content")}</p>
           </div>
 
           <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border px-4 pb-4 rounded-lg col-span-1">
@@ -184,7 +185,7 @@ export const prerender = true;
               <Image height={150} width={150} src={PROJECTS.PRIMAL.image} alt={PROJECTS.PRIMAL.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
             </div>
             <div class="mt-4">{t("home.projects.primalfm.title")}</div>
-            <p class="opacity-60 text-sm">{t("home.projects.primalfm.content")}</p>
+            <p class="opacity-80 text-sm">{t("home.projects.primalfm.content")}</p>
           </div>
 
           <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border pb-4 px-4 rounded-lg col-span-1">
@@ -192,7 +193,7 @@ export const prerender = true;
               <Image height={300} width={300} src={PROJECTS.MWAY.image} alt={PROJECTS.MWAY.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
             </div>
             <div class="mt-4">{t("home.projects.mway.title")}</div>
-            <p class="opacity-60 text-sm">{t("home.projects.mway.description")}</p>
+            <p class="opacity-80 text-sm">{t("home.projects.mway.description")}</p>
           </div>
 
           <div class="flex flex-col bg-slate-100 border-slate-200 dark:bg-neutral-800 dark:border-neutral-700 border px-4 pb-4 rounded-lg col-span-1">
@@ -200,7 +201,7 @@ export const prerender = true;
               <Image height={300} width={300} src={PROJECTS.VERMIETERLUPE.image} alt={PROJECTS.VERMIETERLUPE.name + " Logo"} class="mt-4 mx-auto rounded-sm" />
             </div>
             <div class="mt-4">{t("home.projects.vermieterlupe.title")}</div>
-            <p class="opacity-60 text-sm">{t("home.projects.vermieterlupe.content")}</p>
+            <p class="opacity-80 text-sm">{t("home.projects.vermieterlupe.content")}</p>
           </div>
         </div>
       </div>

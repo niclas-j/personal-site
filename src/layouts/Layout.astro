@@ -17,7 +17,7 @@ import { localizePath } from "astro-i18next";
     <HeadHrefLangs />
   </head>
   <body class="text-neutral-800 dark:text-white dark:bg-neutral-900 transition-colors">
-    <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-700 sm:px-0 px-2">
+    <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-700 sm:px-4 lg:px-0 px-2">
       <div class="mx-auto max-w-6xl flex items-center justify-between h-full">
         <div class="flex items-center space-x-6">
           <a class="font-bold text-xl" href={localizePath("/")}>Niclas Jost</a>
@@ -40,7 +40,7 @@ import { localizePath } from "astro-i18next";
         </div>
       </div>
 
-      <button id="navbar-menu" aria-label="Navbar Menü öffnen" class="sm:hidden">
+      <button id="navbar-menu" aria-label="Navbar Menü öffnen" class="hidden">
         <Icon class="h-8 w-8" name="ic:baseline-menu" />
       </button>
 
@@ -56,10 +56,10 @@ import { localizePath } from "astro-i18next";
     <div id="content" class="min-h-screen">
       <slot />
     </div>
-    <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t">
+    <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t sm:px-4 lg:px-0 px-2">
       <div class="mx-auto max-w-6xl flex justify-between items-center h-full text-xs">
-        <div class="opacity-60">© Niclas Jost 2023</div>
-        <div class="opacity-60">
+        <div class="opacity-80">© Niclas Jost 2023</div>
+        <div class="opacity-80">
           <LanguageSelector class="bg-transparent border-none pr-7 hover:cursor-pointer text-xs" />
           <a href={localizePath("/contact")}>{t("nav.contact")}</a> · <a href={localizePath("/impressum")}>{t("nav.about")}</a> · <a href={localizePath("privacy")}>{t("nav.privacy")}</a>
         </div>

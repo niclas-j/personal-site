@@ -10,7 +10,5 @@ export default defineConfig({
     assets: true,
   },
   output: "server",
-  adapter: vercel({
-    analytics: true,
-  }),
+  adapter: vercel(),
 });

@@ -81,6 +81,7 @@
             "phone": "Phone number",
             "message": "Your message",
             "submit": "Send request"
-        }
+        },
+        "success": "Thanks for your request. I will reach out to you as soon as possible."
     }
 }

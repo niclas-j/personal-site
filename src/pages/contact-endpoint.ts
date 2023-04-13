@@ -11,5 +11,11 @@ export const post: APIRoute = async function post({ request, redirect }) {
 
   await bot.sendMessage(chatId, `Telefonnummer: ${data.get("phone")}, Email: ${data.get("email")}, Message: ${data.get("message")}`);
 
+  const isEnglish = request.url.includes("lang=en");
+
+  if (isEnglish) {
+    return redirect("/en/contact-success");
+  }
+
   return redirect("/contact-success");
 };

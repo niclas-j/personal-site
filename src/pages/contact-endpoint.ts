@@ -11,5 +11,5 @@ export const post: APIRoute = async function post({ request, redirect }) {
 
   await bot.sendMessage(chatId, `Telefonnummer: ${data.get("phone")}, Email: ${data.get("email")}, Message: ${data.get("message")}`);
 
-  return redirect("/contact?success=true");
+  return redirect("/contact-success");
 };

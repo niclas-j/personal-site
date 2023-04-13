@@ -10,6 +10,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^3.2.3
     version: 3.2.3(astro@2.2.3)(react@18.2.0)
+  '@vercel/analytics':
+    specifier: ^0.1.11
+    version: 0.1.11(react@18.2.0)
   astro:
     specifier: ^2.2.3
     version: 2.2.3

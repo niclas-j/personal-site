@@ -1,0 +1,52 @@
+---
+import { changeLanguage, t } from "i18next";
+import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+changeLanguage("de");
+
+const success = Astro.url.searchParams.get("success");
+---
+
+<Layout>
+  <main>
+    <div class="mx-auto max-w-6xl py-8">
+      <div class="text-center">
+        <div class="text-blue-800 border rounded-full inline-flex px-2 py-1 text-sm border-blue-800 dark:border-blue-400 dark:text-blue-400">{t("contact.subtitle")}</div>
+        <h1 class="font-bold text-4xl mt-4">{t("contact.title")}</h1>
+
+        <div class="mt-12 flex justify-center">
+          <form action="mailto:niclas.jost00@gmail.com" method="GET">
+            <button type="submit">
+              <div class="border rounded-xl flex flex-col items-center justify-center p-10 dark:border-neutral-700 transition-colors hover:bg-slate-200 hover:dark:bg-neutral-800">
+                <div class="rounded-full h-16 w-16 bg-blue-800 dark:bg-blue-400 flex items-center justify-center">
+                  <Icon name="ic:baseline-alternate-email" class="w-10 h-10 text-white" />
+                </div>
+                <div class="text-xl mt-2">E-Mail</div>
+                <div class="opacity-80">niclas.jost00@gmail.com</div>
+              </div>
+            </button>
+          </form>
+        </div>
+
+        <hr class="mx-60 my-10 dark:border-neutral-700" />
+      </div>
+
+      <div class="max-w-xl mx-auto px-4 sm:px-0">
+        {
+          success ? (
+            <div class=" px-4 py-3 rounded relative flex items-center text-center flex-col" role="alert">
+              <div>
+                <Icon name="tabler:check" class="h-10 w-10" />
+              </div>
+              <div class="text-xl">{t("contact.success")}</div>
+            </div>
+          ) : (
+            <ContactForm />
+          )
+        }
+      </div>
+    </div>
+  </main>
+</Layout>

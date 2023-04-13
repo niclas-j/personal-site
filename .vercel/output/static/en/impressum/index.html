@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="generator" content="Astro v2.2.3">
+    <title>Niclas Jost</title>
+    <link rel="alternate" hreflang="en" href="http://localhost:3000/en/impressum"><link rel="alternate" hreflang="de" href="http://localhost:3000/impressum">
+  <link rel="stylesheet" href="/_astro/contact.04a93252.css" /><script type="module">const t=document.getElementById("navbar-menu"),e=document.getElementById("menu-container"),a=document.getElementById("content"),n=()=>{e.classList.remove("animate-in"),e.classList.add("hidden","animate-out")};a.addEventListener("click",n);t.addEventListener("click",()=>{e.classList.add("animate-in"),e.classList.remove("hidden","animate-out")});const c=document.getElementById("navbar-menu-close-btn");c.addEventListener("click",n);
+</script>
+<script type="module" src="/_astro/page.f978079d.js"></script></head>
+  <body class="text-neutral-800 dark:text-white dark:bg-neutral-900 transition-colors">
+    <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-700 sm:px-4 lg:px-0 px-2">
+      <div class="mx-auto max-w-6xl flex items-center justify-between h-full">
+        <div class="flex items-center space-x-6">
+          <a class="font-bold text-xl" href="/en">Niclas Jost</a>
+          <div class="flex items-center space-x-2 opacity-80">
+            <a href="https://github.com/niclas-j" target="_blank" aria-label="Öffne mein GitHub Profil">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" astro-icon="mdi:github"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/niclas-jost-45b513240/" target="_blank" aria-label="Öffne mein LinkedIn Profil">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" astro-icon="mdi:linkedin"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-x-8 sm:flex hidden items-center">
+          <a href="/en/#projects">Projects</a>
+          <a href="/en/cv">CV</a>
+          <a href="/en/contact">Contact</a>
+
+          <button id="toggleButton"></button>
+<script>
+  const button = document.getElementById("toggleButton");
+
+  const getTheme = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  };
+  let theme = getTheme();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+    button.textContent = "🌙";
+  } else {
+    document.documentElement.classList.add("dark");
+    button.textContent = "☀️";
+  }
+
+  button.onclick = () => {
+    if (theme === "light") {
+      document.documentElement.classList.add("dark");
+      button.textContent = "☀️";
+      window.localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      button.textContent = "🌙";
+      window.localStorage.setItem("theme", "light");
+    }
+
+    theme = getTheme();
+  };
+
+  window.localStorage.setItem("theme", theme);
+</script>
+        </div>
+      </div>
+
+      <button id="navbar-menu" aria-label="Navbar Menü öffnen" class="hidden">
+        <svg viewBox="0 0 24 24" class="h-8 w-8" astro-icon="ic:baseline-menu"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+
+      <div class="hidden absolute w-full dark:text-white h-96 dark:bg-neutral-900 bg-white border-b dark:border-b-neutral-700 shadow-lg top-0 left-0 slide-out-to-top-96 slide-in-from-top-96" id="menu-container">
+        <div class="flex justify-end h-14 items-center px-2">
+          <button aria-label="Navbar Menü schließen" id="navbar-menu-close-btn">
+            <svg viewBox="0 0 24 24" class="h-8 w-8" astro-icon="ic:baseline-close"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content" class="min-h-screen">
+      
+  <main>
+    <div class="max-w-6xl mx-auto mt-10">
+      <h1 class="font-bold text-3xl">Impressum</h1>
+
+      <div class="mt-4">Niclas Jost</div>
+      <div>niclas.jost00@gmail.com</div>
+      <div>+49 15129804828</div>
+      <div>Kurt Eisner Straße 70, 04275 Leipzig</div>
+    </div>
+  </main>
+
+    </div>
+    <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t sm:px-4 lg:px-0 px-2">
+      <div class="mx-auto max-w-6xl flex justify-between items-center h-full text-xs">
+        <div class="opacity-80">© Niclas Jost 2023</div>
+        <div class="opacity-80">
+          <select onchange="location = this.value;" class="bg-transparent border-none pr-7 hover:cursor-pointer text-xs">
+  <option value="/en/impressum" selected="true">
+          English
+        </option><option value="/impressum">
+          Deutsch
+        </option>
+</select>
+          <a href="/en/contact">Contact</a> · <a href="/en/impressum">About</a> · <a href="/en/privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>

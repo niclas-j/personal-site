@@ -9,7 +9,7 @@ const bot = new TelegramBot(token, { polling: false });
 export const post: APIRoute = async function post({ request, redirect }) {
   const data = await request.formData();
 
-  bot.sendMessage(chatId, `Telefonnummer: ${data.get("phone")}, Email: ${data.get("email")}, Message: ${data.get("message")}`);
+  await bot.sendMessage(chatId, `Telefonnummer: ${data.get("phone")}, Email: ${data.get("email")}, Message: ${data.get("message")}`);
 
   return redirect("/contact?success=true");
 };

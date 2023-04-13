@@ -2,4 +2,5 @@
 export default {
   defaultLocale: "de",
   locales: ["de", "en"],
+  i18nextServerPlugins: ["i18next-fs-backend"],
 };

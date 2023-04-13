@@ -7,7 +7,7 @@
         "about": "About"
     },
     "home": {
-        "title": "Professional <0>Software Developxment</0> from Germany",
+        "title": "Professional <0>Software Development</0> from Germany",
         "action-btn": "Contact now",
         "frontend": {
             "title": "Frontend Development",
@@ -23,7 +23,7 @@
         },
         "aboutme": {
             "title": "About me",
-            "content": "<0>Ich bin ein 23-jähriger Softwareentwickler aus Leipzig und arbeite seit sieben Jahren in diesem Bereich. Seit vier Jahren biete ich meine Dienste als Softwareentwickler an. Ich habe mich auf die Entwicklung von performanten Anwendungen im Web- und Mobilebereich spezialisiert und habe umfangreiche Erfahrung in der Arbeit mit verschiedenen Programmiersprachen und Frameworks. Als junger Mensch bin ich sehr leidenschaftlich und engagiert in meinem Beruf und nehme jede Herausforderung mit Begeisterung an.</0><1>Ich bin in der Lage, innovative und maßgeschneiderte Lösungen für meine Kunden zu entwickeln, die ihre Geschäftsprozesse optimieren und ihr Unternehmen voranbringen können. Ich schätze die Zusammenarbeit mit meinen Kunden und arbeite eng mit ihnen zusammen, um ihre Anforderungen und Ziele zu verstehen und zu erfüllen. Wenn Sie auf der Suche nach einem kompetenten und erfahrenen Softwareentwickler sind, der bereit ist, mit Ihnen zusammenzuarbeiten, um die bestmögliche Lösung für Ihr Unternehmen zu finden, dann bin ich der richtige Partner für Sie. Kontaktieren Sie mich gerne, um mehr darüber zu erfahren, wie ich Ihnen helfen kann.</1>"
+            "content": "<0>I am a 23-year-old software developer from Leipzig, and I have been working in this field for seven years. For the past four years, I have been offering my services as a software developer. I specialize in developing high-performance applications in the web and mobile domains and have extensive experience working with various programming languages and frameworks. As a young person, I am very passionate and dedicated in my profession and approach every challenge with enthusiasm.</0><1>I am capable of developing innovative and customized solutions for my clients that can optimize their business processes and advance their company. I value working collaboratively with my clients and work closely with them to understand and fulfill their requirements and goals. If you are looking for a competent and experienced software developer who is ready to work with you to find the best possible solution for your company, then I am the right partner for you. Please feel free to contact me to learn more about how I can help you.</1>"
         },
         "experience": "Coding Experience",
         "experience-value": "over 7+ years",

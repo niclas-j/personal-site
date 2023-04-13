@@ -1,0 +1,19 @@
+---
+import { changeLanguage, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("en");
+
+export const prerender = true;
+---
+
+<Layout>
+  <main>
+    <div class="mx-auto max-w-6xl py-8">
+      <div class="text-center">
+        <div class="text-blue-800 border rounded-full inline-flex px-2 py-1 text-sm border-blue-800 dark:border-blue-400 dark:text-blue-400">{t("contact.subtitle")}</div>
+        <h1 class="font-bold text-4xl mt-4">{t("contact.success")}</h1>
+      </div>
+    </div>
+  </main>
+</Layout>

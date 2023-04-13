@@ -1,8 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
-
-import netlify from "@astrojs/netlify/functions";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +10,5 @@ export default defineConfig({
     assets: true,
   },
   output: "server",
-  adapter: netlify(),
+  adapter: vercel(),
 });

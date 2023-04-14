@@ -13,8 +13,12 @@ import { localizePath } from "astro-i18next";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Niclas Jost</title>
+    <title>Niclas Jost - Profesionelle Softwareentwicklung aus Deutschland</title>
     <HeadHrefLangs />
+    <meta property="og:title" content="Niclas Jost - Profesionelle Softwareentwicklung aus Deutschland" />
+    <meta property="og:url" content="https://asjost.com" />
+    <meta property="og:image" content="https://asjost.com/_astro/profilbild.6cfb46fd_Z3D8dO.webp" />
+
     <meta name="description" content="Als professioneller Entwickler biete ich maßgeschneiderte und performante Lösungen für Web- und mobile Anwendungen. Mit meiner Expertise in Frontend-, Backend- und Full-Stack-Entwicklung helfe ich Ihnen, Ihre Online-Präsenz auf die nächste Stufe zu bringen. Kontaktieren Sie mich gerne, um Ihre Projekte zu besprechen." />
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
@@ -47,7 +51,7 @@ import { localizePath } from "astro-i18next";
           </div>
         </div>
 
-        <div class="items-center space-x-8">
+        <div class="flex items-center space-x-8">
           <a class="hidden sm:block" href={localizePath("/#projects")}>{t("nav.projects")}</a>
           <a class="hidden sm:block" href={localizePath("/cv")}>{t("nav.cv")}</a>
           <a class="hidden sm:block" href={localizePath("/contact")}>{t("nav.contact")}</a>

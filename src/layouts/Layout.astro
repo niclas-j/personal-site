@@ -17,11 +17,11 @@ import { localizePath } from "astro-i18next";
     <HeadHrefLangs />
     <meta name="description" content="Als professioneller Entwickler biete ich maßgeschneiderte und performante Lösungen für Web- und mobile Anwendungen. Mit meiner Expertise in Frontend-, Backend- und Full-Stack-Entwicklung helfe ich Ihnen, Ihre Online-Präsenz auf die nächste Stufe zu bringen. Kontaktieren Sie mich gerne, um Ihre Projekte zu besprechen." />
   </head>
-  <body class="text-neutral-800 dark:text-white dark:bg-neutral-900 transition-colors">
-    <nav class="border-b h-14 bg-white dark:bg-neutral-900 dark:border-b-neutral-700 sm:px-4 lg:px-0 px-2">
-      <div class="mx-auto max-w-6xl flex items-center justify-between h-full">
+  <body class={`${import.meta.env.DEV && "debug-screens"} text-neutral-800 transition-colors dark:bg-neutral-900 dark:text-white`}>
+    <nav class="h-14 border-b bg-white px-2 dark:border-b-neutral-700 dark:bg-neutral-900 sm:px-4 lg:px-0">
+      <div class="mx-auto flex h-full max-w-6xl items-center justify-between">
         <div class="flex items-center space-x-6">
-          <a class="font-bold text-xl" href={localizePath("/")}>Niclas Jost</a>
+          <a class="text-xl font-bold" href={localizePath("/")}>Niclas Jost</a>
           <div class="flex items-center space-x-2 opacity-80">
             <a href="https://github.com/niclas-j" target="_blank" aria-label="Öffne mein GitHub Profil">
               <Icon name="mdi:github" class="h-6 w-6" />
@@ -32,7 +32,7 @@ import { localizePath } from "astro-i18next";
           </div>
         </div>
 
-        <div class="space-x-8 sm:flex hidden items-center">
+        <div class="hidden items-center space-x-8 sm:flex">
           <a href={localizePath("/#projects")}>{t("nav.projects")}</a>
           <a href={localizePath("/cv")}>{t("nav.cv")}</a>
           <a href={localizePath("/contact")}>{t("nav.contact")}</a>
@@ -45,8 +45,8 @@ import { localizePath } from "astro-i18next";
         <Icon class="h-8 w-8" name="ic:baseline-menu" />
       </button>
 
-      <div class="hidden absolute w-full dark:text-white h-96 dark:bg-neutral-900 bg-white border-b dark:border-b-neutral-700 shadow-lg top-0 left-0 slide-out-to-top-96 slide-in-from-top-96" id="menu-container">
-        <div class="flex justify-end h-14 items-center px-2">
+      <div class="absolute left-0 top-0 hidden h-96 w-full border-b bg-white shadow-lg slide-in-from-top-96 slide-out-to-top-96 dark:border-b-neutral-700 dark:bg-neutral-900 dark:text-white" id="menu-container">
+        <div class="flex h-14 items-center justify-end px-2">
           <button aria-label="Navbar Menü schließen" id="navbar-menu-close-btn">
             <Icon class="h-8 w-8" name="ic:baseline-close" />
           </button>
@@ -57,11 +57,11 @@ import { localizePath } from "astro-i18next";
     <div id="content" class="min-h-screen">
       <slot />
     </div>
-    <footer class="bg-slate-100 dark:bg-neutral-800 dark:border-neutral-700 h-14 text-xs border-t sm:px-4 lg:px-0 px-2">
-      <div class="mx-auto max-w-6xl flex justify-between items-center h-full text-xs">
+    <footer class="h-14 border-t bg-slate-100 px-2 text-xs dark:border-neutral-700 dark:bg-neutral-800 sm:px-4 lg:px-0">
+      <div class="mx-auto flex h-full max-w-6xl items-center justify-between text-xs">
         <div class="opacity-80">© Niclas Jost 2023</div>
         <div class="opacity-80">
-          <LanguageSelector class="bg-transparent border-none pr-7 hover:cursor-pointer text-xs" />
+          <LanguageSelector class="border-none bg-transparent pr-7 text-xs hover:cursor-pointer" />
           <a href={localizePath("/contact")}>{t("nav.contact")}</a> · <a href={localizePath("/impressum")}>{t("nav.about")}</a> · <a href={localizePath("privacy")}>{t("nav.privacy")}</a>
         </div>
       </div>

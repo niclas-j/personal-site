@@ -14,30 +14,38 @@ export const prerender = true;
   <main>
     <div class="mx-auto max-w-6xl py-8">
       <div class="text-center">
-        <div class="text-blue-800 border rounded-full inline-flex px-2 py-1 text-sm border-blue-800 dark:border-blue-400 dark:text-blue-400">{t("contact.subtitle")}</div>
-        <h1 class="font-bold text-4xl mt-4">{t("contact.title")}</h1>
+        <div class="inline-flex rounded-full border border-blue-800 px-2 py-1 text-sm text-blue-800 dark:border-blue-400 dark:text-blue-400">{t("contact.subtitle")}</div>
+        <h1 class="mt-4 text-4xl font-bold">{t("contact.title")}</h1>
 
-        <div class="mt-12 flex justify-center">
+        <div class="mx-auto mt-12 flex max-w-xl flex-col px-4 sm:flex-row sm:justify-between sm:px-0">
           <form action="mailto:niclas.jost00@gmail.com" method="GET">
-            <button type="submit">
-              <div class="border rounded-xl flex flex-col items-center justify-center p-10 dark:border-neutral-700 transition-colors hover:bg-slate-200 hover:dark:bg-neutral-800">
-                <div class="rounded-full h-16 w-16 bg-blue-800 dark:bg-blue-400 flex items-center justify-center">
-                  <Icon name="ic:baseline-alternate-email" class="w-10 h-10 text-white" />
-                </div>
-                <div class="text-xl mt-2">E-Mail</div>
-                <div class="opacity-80">niclas.jost00@gmail.com</div>
+            <button class="flex w-full max-w-full items-center justify-between rounded-md border px-4 py-3 transition-colors hover:bg-slate-200 dark:border-neutral-700 hover:dark:bg-neutral-800 sm:w-60 sm:flex-col sm:justify-center sm:rounded-xl sm:p-10" type="submit">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 dark:bg-blue-400 sm:h-16 sm:w-16">
+                <Icon name="ic:baseline-alternate-email" class="h-6 w-6 text-white sm:h-10 sm:w-10" />
               </div>
+              <div class="mt-2 hidden text-xl sm:block">E-Mail</div>
+              <div class="opacity-80">niclas.jost00@gmail.com</div>
+            </button>
+          </form>
+
+          <form action="tel:+4915129804828" method="GET">
+            <button class="mt-4 flex w-full max-w-full items-center justify-between rounded-md border px-4 py-3 transition-colors hover:bg-slate-200 dark:border-neutral-700 hover:dark:bg-neutral-800 sm:mt-0 sm:w-60 sm:flex-col sm:justify-center sm:rounded-xl sm:p-10" type="submit">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 dark:bg-blue-400 sm:h-16 sm:w-16">
+                <Icon name="ic:baseline-local-phone" class="h-6 w-6 text-white sm:h-10 sm:w-10" />
+              </div>
+              <div class="mt-2 hidden text-xl sm:block">Phone</div>
+              <div class="opacity-80">+49 1512 9804828</div>
             </button>
           </form>
         </div>
 
-        <hr class="mx-60 my-10 dark:border-neutral-700" />
+        <hr class="mx-60 my-10 hidden dark:border-neutral-700 sm:block" />
       </div>
 
-      <div class="max-w-xl mx-auto px-4 sm:px-0">
+      <div class="mx-auto mt-8 max-w-xl px-4 sm:mt-0 sm:px-0">
         {
           success ? (
-            <div class=" px-4 py-3 rounded relative flex items-center text-center flex-col" role="alert">
+            <div class=" relative flex flex-col items-center rounded px-4 py-3 text-center" role="alert">
               <div>
                 <Icon name="tabler:check" class="h-10 w-10" />
               </div>

@@ -47,10 +47,10 @@ import { localizePath } from "astro-i18next";
           </div>
         </div>
 
-        <div class="hidden items-center space-x-8 sm:flex">
-          <a href={localizePath("/#projects")}>{t("nav.projects")}</a>
-          <a href={localizePath("/cv")}>{t("nav.cv")}</a>
-          <a href={localizePath("/contact")}>{t("nav.contact")}</a>
+        <div class="items-center space-x-8">
+          <a class="hidden sm:block" href={localizePath("/#projects")}>{t("nav.projects")}</a>
+          <a class="hidden sm:block" href={localizePath("/cv")}>{t("nav.cv")}</a>
+          <a class="hidden sm:block" href={localizePath("/contact")}>{t("nav.contact")}</a>
 
           <DarkModeToggle />
         </div>

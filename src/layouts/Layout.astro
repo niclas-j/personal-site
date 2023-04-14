@@ -16,6 +16,21 @@ import { localizePath } from "astro-i18next";
     <title>Niclas Jost</title>
     <HeadHrefLangs />
     <meta name="description" content="Als professioneller Entwickler biete ich maßgeschneiderte und performante Lösungen für Web- und mobile Anwendungen. Mit meiner Expertise in Frontend-, Backend- und Full-Stack-Entwicklung helfe ich Ihnen, Ihre Online-Präsenz auf die nächste Stufe zu bringen. Kontaktieren Sie mich gerne, um Ihre Projekte zu besprechen." />
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved && themeSaved === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (themeSaved && themeSaved === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (prefersDark) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+    </script>
   </head>
   <body class={`${import.meta.env.DEV && "debug-screens"} text-neutral-800 transition-colors dark:bg-neutral-900 dark:text-white`}>
     <nav class="h-14 border-b bg-white px-2 dark:border-b-neutral-700 dark:bg-neutral-900 sm:px-4 lg:px-0">
@@ -66,24 +81,5 @@ import { localizePath } from "astro-i18next";
         </div>
       </div>
     </footer>
-    <script>
-      const navbarMenu = document.getElementById("navbar-menu");
-      const menuContainer = document.getElementById("menu-container");
-      const content = document.getElementById("content");
-
-      const closeBurgerMenu = () => {
-        menuContainer!.classList.remove("animate-in");
-        menuContainer!.classList.add("hidden", "animate-out");
-      };
-      content!.addEventListener("click", closeBurgerMenu);
-
-      navbarMenu!.addEventListener("click", () => {
-        menuContainer!.classList.add("animate-in");
-        menuContainer!.classList.remove("hidden", "animate-out");
-      });
-
-      const closeBtn = document.getElementById("navbar-menu-close-btn");
-      closeBtn!.addEventListener("click", closeBurgerMenu);
-    </script>
   </body>
 </html>

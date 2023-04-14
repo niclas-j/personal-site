@@ -1,39 +1,30 @@
-<button id="toggleButton"></button>
-<script is:inline>
+---
+import { Icon } from "astro-icon";
+---
+
+<button id="toggleButton">
+  <div class="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+</button>
+<script>
   const button = document.getElementById("toggleButton");
 
-  const getTheme = () => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  };
-  let theme = getTheme();
+  const getThemeCurrent = () => localStorage.getItem("theme");
 
-  if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-    button.textContent = "🌙";
-  } else {
-    document.documentElement.classList.add("dark");
-    button.textContent = "☀️";
-  }
-
-  button.onclick = () => {
-    if (theme === "light") {
+  button!.addEventListener("click", () => {
+    const currentTheme = getThemeCurrent();
+    if (currentTheme === "light") {
       document.documentElement.classList.add("dark");
-      button.textContent = "☀️";
-      window.localStorage.setItem("theme", "dark");
-    } else {
+      localStorage.setItem("theme", "dark");
+    } else if (currentTheme === "dark") {
       document.documentElement.classList.remove("dark");
-      button.textContent = "🌙";
-      window.localStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
     }
+    const updatedTheme = getThemeCurrent();
+    button!.textContent = updatedTheme === "light" ? "🌙" : "☀️";
+    localStorage.setItem("theme", updatedTheme || "light");
+  });
 
-    theme = getTheme();
-  };
+  const theme = localStorage.getItem("theme");
 
-  window.localStorage.setItem("theme", theme);
+  button!.textContent = theme === "light" ? "🌙" : "☀️";
 </script>

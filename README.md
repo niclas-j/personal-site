@@ -7,4 +7,4 @@
 Built using HTML/CSS/JS + Astro
 
 
-![Lighthouse](./../public/lighthouse_24-04-23.png)
+![Lighthouse](https://asjost.com/lighthouse_24-04-23.png)

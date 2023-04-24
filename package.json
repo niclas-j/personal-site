@@ -11,10 +11,8 @@
     "i18n:generate": "astro-i18next generate"
   },
   "dependencies": {
-    "@astrojs/netlify": "^2.2.2",
     "@astrojs/tailwind": "^3.1.1",
     "@astrojs/vercel": "^3.2.3",
-    "@vercel/analytics": "^0.1.11",
     "astro": "^2.2.3",
     "astro-i18next": "1.0.0-beta.21",
     "astro-icon": "^0.8.0",

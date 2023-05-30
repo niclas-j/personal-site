@@ -1,0 +1,87 @@
+{
+    "nav": {
+        "contact": "Contact",
+        "cv": "CV",
+        "projects": "Projects",
+        "privacy": "Privacy",
+        "about": "About"
+    },
+    "home": {
+        "title": "Professional <0>Software Development</0> from Germany",
+        "action-btn": "Contact now",
+        "frontend": {
+            "title": "Frontend Development",
+            "content": "No matter if it's a static website or an interactive web application, my experience in front-end development allows me to offer tailor-made and high-performance solutions. With my expertise and commitment to innovative solutions, I can help you take your online presence to the next level."
+        },
+        "backend": {
+            "title": "Backend Development",
+            "content": "Developing full-stack and back-end applications is also part of my portfolio. This allows for the creation of important back-end structures for communication or server-side applications."
+        },
+        "mobile": {
+            "title": "Mobile App Development",
+            "content": "I offer professional mobile app development for iOS and Android, based on React Native, Flutter, or Ionic. My skills include using these frameworks to develop cross-platform apps, as well as collaborating with you to create an engaging user experience."
+        },
+        "aboutme": {
+            "title": "About me",
+            "content": "<0>I am a 23-year-old software developer from Leipzig, and I have been working in this field for seven years. For the past four years, I have been offering my services as a software developer. I specialize in developing high-performance applications in the web and mobile domains and have extensive experience working with various programming languages and frameworks. As a young person, I am very passionate and dedicated in my profession and approach every challenge with enthusiasm.</0><1>I am capable of developing innovative and customized solutions for my clients that can optimize their business processes and advance their company. I value working collaboratively with my clients and work closely with them to understand and fulfill their requirements and goals. If you are looking for a competent and experienced software developer who is ready to work with you to find the best possible solution for your company, then I am the right partner for you. Please feel free to contact me to learn more about how I can help you.</1>"
+        },
+        "experience": "Coding Experience",
+        "experience-value": "over 7+ years",
+        "freelancer-value": "since 4+ years",
+        "languages": "Languages",
+        "language-german": "German",
+        "language-english": "English",
+        "projects": {
+            "title": "Selected Projects",
+            "rewe": {
+                "title": "Rewe Allergene Terminal",
+                "content": "Information for REWE Customers at the fresh counter. Automatic updates and intelligent search over the specialized iPad App."
+            },
+            "whizzper": {
+                "title": "Whizzper",
+                "content": "The internal audio library for companies."
+            },
+            "primalfm": {
+                "title": "primal.fm",
+                "content": "Your web radio for Hardstyle & EDM!"
+            },
+            "mway": {
+                "title": "mway interaktiver Messeplan",
+                "content": "Interactive plan for navigation of fairs and halls. List of events and exhibitors."
+            },
+            "vermieterlupe": {
+                "title": "Vermieterlupe",
+                "content": "Portal for anonymous rating of landlords."
+            }
+        }
+    },
+    "cv": {
+        "title": "CV",
+        "first": {
+            "title": "Software Development Freelancer"
+        },
+        "second": {
+            "title": "Bachelor of Science",
+            "content": "Thesis about the comparison of V-DOM and Signal-based web applications."
+        },
+        "third": {
+            "title": "Database Engineer",
+            "content": "SQL Database Engineer at Tridelta Systemhaus Hermsdorf."
+        },
+        "fourth": {
+            "title": "Vocational training as a technical assistant for computer science",
+            "content": "Completed vocational training as a technical assistant for computer science at the TüV Rheinland School Gera."
+        }
+    },
+    "contact": {
+        "title": "I am looking forward to hearing from you!",
+        "subtitle": "Contact me",
+        "formular": {
+            "title": "Contactform",
+            "phone": "Phone number",
+            "message": "Your message",
+            "submit": "Send request"
+        },
+        "success": "Thanks for your request. I will reach out to you as soon as possible."
+    }
+}

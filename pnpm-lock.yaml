@@ -7,6 +7,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^3.7.4
     version: 3.7.4(astro@2.9.3)(react@18.2.0)
+  '@loglib/tracker':
+    specifier: ^0.4.3
+    version: 0.4.3(react@18.2.0)
   astro:
     specifier: ^2.9.3
     version: 2.9.3
@@ -878,6 +881,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+
+  /@loglib/tracker@0.4.3(react@18.2.0):
+    resolution: {integrity: sha512-IbzS0QW8jl/h48gJ+kuQPZMWht8zfmwmtiKwDKYnsebkrOG+faYx077RfQkhx+Wj7HCQokUjN5uB5jv6AvwAxA==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@mapbox/node-pre-gyp@1.0.11:
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}

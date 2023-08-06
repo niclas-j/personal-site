@@ -12,4 +12,7 @@ export default defineConfig({
   output: "server",
   adapter: vercel(),
   compressHTML: true,
+  redirects: {
+    '/api/loglib': 'https://loglib.io/api/loglib',
+  }
 });

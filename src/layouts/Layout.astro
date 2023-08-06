@@ -48,6 +48,13 @@ import { localizePath } from "astro-i18next";
         }
       }
     </script>
+    <script>
+      import {loglib} from "@loglib/tracker"
+
+      loglib.record({
+          id: "asjost",
+      })
+    </script>
   </head>
   <body class={`${import.meta.env.DEV && "debug-screens"} text-neutral-800 transition-colors dark:bg-neutral-900 dark:text-white`}>
     <nav class="h-14 border-b bg-white px-2 dark:border-b-neutral-700 dark:bg-neutral-900 sm:px-4 lg:px-0">

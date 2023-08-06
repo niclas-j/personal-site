@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
     "@astrojs/vercel": "^3.7.4",
+    "@loglib/tracker": "^0.4.3",
     "astro": "^2.9.3",
     "astro-i18next": "1.0.0-beta.21",
     "astro-icon": "^0.8.1",

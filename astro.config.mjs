@@ -1,12 +1,16 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroI18next()],
-  output: "hybrid",
+  integrations: [astroI18next(), icon()],
+  output: "server",
   adapter: vercel(),
   compressHTML: true,
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
